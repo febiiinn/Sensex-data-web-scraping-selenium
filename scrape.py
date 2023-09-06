@@ -55,16 +55,16 @@ import csv
 
 def get_day(data):
    try:
-      return data[0].text.split()[0]
+      return data[0].text.split()[1].strip(",")
    except Exception as e:
-      print("Day extraction ERROR:",e)
+      print("Month extraction ERROR:",e)
       return ""
    
 def get_month(data):
    try:
-      return data[0].text.split()[1].strip(",")
+      return data[0].text.split()[0]
    except Exception as e:
-      print("Month extraction ERROR:",e)
+      print("Day extraction ERROR:",e)
       return ""
    
 def get_year(data):
